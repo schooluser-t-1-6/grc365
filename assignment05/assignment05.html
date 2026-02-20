@@ -10,7 +10,7 @@
 		} 
 		#page {
 			width: 928px;
-			height: 1228px;
+			height: 1828px;
 			background: lightgray;
 			border: 1px solid darkgray;
             margin: 0 auto;
@@ -19,8 +19,12 @@
 			text-align: center;
 			font: 36pt/1.4em Impact;
 		}
+        @font-face {
+            font-family: Georgia;
+            src: url("georgia.ttf");
+		}
 		p {
-			font: 14pt/1.4em Georgia;
+			font: 14pt/1.4em Georgia, sans-serif;
 			width: 760px;
 			margin: 12px auto;
 		}
@@ -33,7 +37,7 @@
         }
         #banner {
             width: 928px;
-			height: 25%;
+			//height: 25%;
 			float: none;
 			margin: none;
             border: none;
@@ -44,13 +48,13 @@
 			margin: 0 auto;
 		}
 		figurecaption {
-			font: italic 12pt/1.4em Georgia;
+			font: italic 12pt/1.4em Georgia, sans-serif;
 			margin-top: 12px
 			text-align: center;
 		}
 		table {
 			margin: 48px auto;
-			font: 14pt/1.4em Georgia;
+			font: 14pt/1.4em Georgia, sans-serif;
 			border-collapse: collapse;
 			border: 1px solid dimgray;
 			box-shadow: 2px 3px 6px dimgray;
@@ -58,8 +62,9 @@
 		td, th {
 			padding: 6px 12px;
 		}
-		tr:nth-child(odd) {
+		tr:nth-child(even) {
 			background: grainsboro;
+			background-color: white;
 		}
     </style>
 </head>
@@ -120,7 +125,7 @@
 				<th> Purpose </th>
 				<th> Status </th>
 			</tr>
-			<tr> <td> Devil May Cry 5 Bosses </td> <td> Cure to College Boredom </td> <td> ADOPTED, ACTIVE </td>
+			<tr> <td> Devil May Cry 5 Bosses </td> <td> Cure to College Boredom </td> <td> ADOPTED, ACTIVE </td> </tr>
 			<tr> <td> Mixer and Shaker </td> <td> Flamethrower Weapon Option </td> <td> ACTIVE, RELEASED </td> </tr>
 			
 			<tr> <td> The Deadnaut </td> <td> First Custom-Animated Boss </td> <td> ACTIVE, RELEASED </td> </tr>
