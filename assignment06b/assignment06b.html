@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>assignment06b</title>
+
+    <style>
+	
+		.container {
+  			display: grid;
+  			grid-template: auto auto / auto auto;
+			grid-area: 1/2/3/3;
+  			background-color: darkgray;
+  			padding: 0px;
+		}
+		.container div {
+  			background-color: darkgray;
+  			padding: 0px;
+  			font-size: 30px;
+  			text-align: center;
+		}
+		
+        body {
+			background: whitesmoke;
+		} 
+		#page {
+			width: 928px;
+			height: 1228px;
+			background: lightgray;
+			border: 0px solid darkgray;
+            margin: 0 auto;
+		} 
+		h1 {
+			text-align: center;
+			font: 36pt/1.4em Impact;
+		}
+		#textbox {
+			width: 908px;
+			height: 955px;
+			margin: 0 auto;
+			background: darkgray;
+			border: 10px solid gainsboro;
+			display: flex;
+			justify-content: center;
+			aligh-items: flex-start;
+			flex-wrap: wrap;
+		}
+        @font-face {
+            font-family: Georgia;
+            src: url("georgia.ttf");
+		}
+		p {
+			font: 14pt/1.4em Georgia, sans-serif;
+			width: 760px;
+			margin: 12px auto;
+		}
+        #banner {
+            width: 928px;
+			height: 25%;
+			float: none;
+			margin: none;
+            border: none;
+			box-shadow: none;
+        }
+		#asset1, .zoom {
+            height: 400px;
+            float: center;
+            margin: 6px 6px 6px 0;
+            border: 1px solid dimgray;
+			box-shadow: 2px 3px 6px
+			transition: transform 0.5s;
+			background: url("magazine_makeover.jpg");
+			background-size: 100%
+			background-position: center;
+        }
+		#asset1:hover {
+			transform: scale(1.03);
+			transition: transform 0.5s;
+			background-size: 105%;
+			transition: background-size 0.5s;
+		}
+		#asset2, .zoom {
+            height: 400px;
+            float: center;
+            margin: 6px 6px 6px 0;
+            border: 1px solid dimgray;
+			box-shadow: 2px 3px 6px
+			transition: transform 0.5s;
+			background: url("foundation_mock.png");
+			background-size: 100%
+			background-position: center;
+        }
+		#asset2:hover {
+			transform: scale(1.03);
+			transition: transform 0.5s;
+			background-size: 105%;
+			transition: background-size 0.5s;
+		}
+		#asset3, .zoom {
+            height: 480px;
+            float: center;
+            margin: 6px 6px 6px 0;
+            border: 1px solid dimgray;
+			box-shadow: 2px 3px 6px
+			transition: transform 0.5s;
+			background: url("speedpaint_ironwill.png");
+			background-size: 100%
+			background-position: center;
+        }
+		#asset3:hover {
+			transform: scale(1.03);
+			transition: transform 0.5s;
+			background-size: 105%;
+			transition: background-size 0.5s;
+		}
+		figure {
+			width: 300px;
+			margin: 10px;
+		}
+    </style>
+</head>
+
+<body>
+    <div id="page">
+	<img id="banner" src="banner_dlz2026.png" alt="Banner">
+	
+	<h1>Portfolio</h1>
+		<div class="container">
+			<div id="textbox">
+			  	<figure>
+					<a href="magazine_makeover.jpg">
+					<img id="asset1" src="magazine_makeover_thumb.png" alt="Item1"/>
+					</a>
+				</figure>
+  				<figure>
+					<a href="foundation_mock.png">
+					<img id="asset2" src="foundation_mock_thumb.png" alt="Item2"/>
+					</a>
+				</figure>
+  				<figure>
+					<a href="speedpaint_ironwill.png">
+					<img id="asset3" src="speedpaint_ironwill_thumb.png" alt="Item3"/>
+					</a>
+				</figure>
+				<figure>
+		
+				</figure>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
