@@ -8,24 +8,28 @@
 	
 		.container {
   			display: grid;
-  			grid-template: auto auto / auto auto;
-			grid-area: 1/2/3/3;
-  			background-color: darkgray;
-  			padding: 0px;
+  			grid-template-columns: 320px 320px;
+  			background-color: whitesmoke;
+  			padding: 10px;
+			width: 640px;
+			margin: 0 auto;
+			justify-items: center;
 		}
 		.container div {
-  			background-color: darkgray;
+  			background-color: whitesmoke;
+  			--border: 1px solid black;
   			padding: 0px;
-  			font-size: 30px;
+  			font-size: 0px;
   			text-align: center;
 		}
+		.container > div:nth-child(3) {grid-column: 1 / -1;}
 		
         body {
 			background: whitesmoke;
 		} 
 		#page {
 			width: 928px;
-			height: 1228px;
+			height: 1358px;
 			background: lightgray;
 			border: 0px solid darkgray;
             margin: 0 auto;
@@ -34,29 +38,13 @@
 			text-align: center;
 			font: 36pt/1.4em Impact;
 		}
-		#textbox {
-			width: 908px;
-			height: 955px;
-			margin: 0 auto;
-			background: darkgray;
-			border: 10px solid gainsboro;
-			display: flex;
-			justify-content: center;
-			aligh-items: flex-start;
-			flex-wrap: wrap;
-		}
         @font-face {
             font-family: Georgia;
             src: url("georgia.ttf");
 		}
-		p {
-			font: 14pt/1.4em Georgia, sans-serif;
-			width: 760px;
-			margin: 12px auto;
-		}
         #banner {
             width: 928px;
-			height: 25%;
+			height: 300px;
 			float: none;
 			margin: none;
             border: none;
@@ -64,14 +52,16 @@
         }
 		#asset1, .zoom {
             height: 400px;
+			width: 300px;
             float: center;
-            margin: 6px 6px 6px 0;
+            margin: 6px 6px 6px 6px;
             border: 1px solid dimgray;
 			box-shadow: 2px 3px 6px
 			transition: transform 0.5s;
 			background: url("magazine_makeover.jpg");
 			background-size: 100%
 			background-position: center;
+			grid-area: 1/1;
         }
 		#asset1:hover {
 			transform: scale(1.03);
@@ -81,14 +71,16 @@
 		}
 		#asset2, .zoom {
             height: 400px;
+			width: 300px;
             float: center;
-            margin: 6px 6px 6px 0;
-            border: 1px solid dimgray;
+            margin: 6px 6px 6px 6px;
+			border: 1px solid dimgray;
 			box-shadow: 2px 3px 6px
 			transition: transform 0.5s;
 			background: url("foundation_mock.png");
 			background-size: 100%
 			background-position: center;
+			grid-area: 1/2;
         }
 		#asset2:hover {
 			transform: scale(1.03);
@@ -97,25 +89,23 @@
 			transition: background-size 0.5s;
 		}
 		#asset3, .zoom {
-            height: 480px;
+            height: 400px;
+			width: 620px;
             float: center;
-            margin: 6px 6px 6px 0;
+            margin: 6px 6px 6px 6px;
             border: 1px solid dimgray;
 			box-shadow: 2px 3px 6px
 			transition: transform 0.5s;
 			background: url("speedpaint_ironwill.png");
 			background-size: 100%
 			background-position: center;
+			grid-area: 2/1/2/2;
         }
 		#asset3:hover {
 			transform: scale(1.03);
 			transition: transform 0.5s;
 			background-size: 105%;
 			transition: background-size 0.5s;
-		}
-		figure {
-			width: 300px;
-			margin: 10px;
 		}
     </style>
 </head>
@@ -126,27 +116,22 @@
 	
 	<h1>Portfolio</h1>
 		<div class="container">
-			<div id="textbox">
-			  	<figure>
+			  	<div>
 					<a href="magazine_makeover.jpg">
 					<img id="asset1" src="magazine_makeover_thumb.png" alt="Item1"/>
 					</a>
-				</figure>
-  				<figure>
+				</div>
+  				<div>
 					<a href="foundation_mock.png">
 					<img id="asset2" src="foundation_mock_thumb.png" alt="Item2"/>
 					</a>
-				</figure>
-  				<figure>
+				</div>
+  				<div>
 					<a href="speedpaint_ironwill.png">
 					<img id="asset3" src="speedpaint_ironwill_thumb.png" alt="Item3"/>
 					</a>
-				</figure>
-				<figure>
-		
-				</figure>
+				</div>
 			</div>
-		</div>
 	</div>
 </body>
 
