@@ -49,19 +49,23 @@
       }
 		
 	  @keyframes moveAcross {
-			0%   { transform: translateX(-200px) translateY(420px); opacity: 0; }
-			10%  { opacity: 1; }
-			90%  { transform: translateX(calc(100vw + 200px)) translateY(420px); opacity: 1; }
-			100% { transform: translateX(calc(100vw + 200px)) translateY(420px); opacity: 0; }
+		  /* 5 Second Animation */
+		  0%   { transform: translateX(-200px) translateY(420px); opacity: 1; }
+		  5%   { opacity: 1; }
+		  20%  { transform: translateX(calc(100vw + 200px)) translateY(420px); opacity: 1; }
+
+		  /* 20 Second Delay */
+		  100% { transform: translateX(calc(100vw + 200px)) translateY(420px); opacity: 0; }
 	  }
 
 	  #anim_apollo {
-		position: absolute;
-		top: 20%;
-		left: -200px;
-		width: 120px;
-		animation: moveAcross 5s linear infinite;
-		pointer-events: none;
+  	  	position: absolute;
+  	  	top: 20%;
+ 		left: 0;
+  		transform: translateX(-200px);
+  		width: 220px;
+  		animation: moveAcross 25s linear infinite;
+  		pointer-events: none;
 	  }
 
 	  @media screen and (max-width : 750px ){
@@ -87,12 +91,15 @@
 			box-shadow: 2px 3px 6px;
           }
 		  
-		  @keyframes moveAcross {
-			0%   { transform: translateX(-200px) translateY(1060px); opacity: 0; }
-			10%  { opacity: 1; }
-			90%  { transform: translateX(calc(100vw + 200px)) translateY(1060px); opacity: 1; }
-			100% { transform: translateX(calc(100vw + 200px)) translateY(1060px); opacity: 0; }
-		  }
+	 	  @keyframes moveAcross {
+		  	/* 5 Second Animation */
+		 	0%   { transform: translateX(-200px) translateY(1060px); opacity: 1; }
+		 	5%   { opacity: 1; }
+		  	20%  { transform: translateX(calc(100vw + 200px)) translateY(1060px); opacity: 1; }
+
+		  	/* 20 Second Delay */
+		  	100% { transform: translateX(calc(100vw + 200px)) translateY(1060px); opacity: 0; }
+	  	  }
 	  }
   </style>
 </head>
