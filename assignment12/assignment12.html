@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>assignment12</title>
+
+    <style>
+        body {
+            background: whitesmoke;
+        } 
+
+        #page {
+            width: 928px;
+            background: lightgray;
+            border: 1px solid darkgray;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        } 
+
+        h1 {
+            text-align: center;
+            font: 36pt/1.4em Impact;
+        }
+
+        p {
+            font: 14pt/1.4em Georgia, sans-serif;
+            width: 760px;
+            margin: 12px auto;
+        }
+		
+        @font-face {
+            font-family: Georgia;
+            src: url("georgia.ttf");
+        }
+		
+        #banner {
+            width: 928px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* BUTTON */
+        #revealBtn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 14pt;
+            cursor: pointer;
+        }
+
+        /* IMAGE BOX */
+        #slideBox {
+            width: 760px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            background: #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* IMAGES SIDE-BY-SIDE */
+        .slideItem {
+            width: 230px;
+            height: auto;
+            margin: 5px;
+            display: inline-block;
+            position: relative; /* so left animation works */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+
+        <img id="banner" src="banner_dlz2026.png" alt="Banner">
+
+        <h1>DLZ Robotics</h1>
+
+        <!-- BUTTON -->
+        <button id="revealBtn">Cycle Portraits</button>
+
+        <!-- IMAGE DISPLAY AREA -->
+        <div id="slideBox">
+            <img class="slideItem" id="img1" src="dlz_zuckerberg_portrait_alt.png" alt="Item">
+            <img class="slideItem" id="img2" src="dlz_bulwark.png" alt="Item">
+            <img class="slideItem" id="img3" src="dlz_frisk.png" alt="Item">
+        </div>
+
+        <p>
+            A random concept from 2019, DLZ Robotics was originally known as "Zuckerberg Corp.", an organization that created experimental robots to protect the world from any possible unforeseen threats. In 2023, the concept was rebranded as "DLZ Robotics" and evolved to become a pack of playable bosses in Garry's Mod.
+        </p>
+        <p>
+            In the modern iteration, Dr. Lloyd Zuckerberg is a solo creator who was once friends with another creator, someone who was martyred over a system that runs on hypocrisy. DLZ developed experimental robots to act as guardians that protected himself and the innocent, eventually enhancing some of the bots using an ethereal material he develops: liquid horror. Though liquid horror has its limits, its biggest strength is the power to bypass invincibility, forcing the many god-like oppressors either adapt skill or die a pushover.
+        </p>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- SIMPLE SLIDE-LEFT + FADE SCRIPT -->
+    <script>
+    $(document).ready(function () {
+
+        const groups = [
+            ["dlz_zuckerberg_portrait_alt.png", "dlz_bulwark.png", "dlz_frisk.png"],
+            ["dlz_creep.png", "dlz_diskmaster.png", "dlz_littlemiss.png"],
+            ["dlz_skelter.png", "dlz_ironwill.png", "dlz_scrim.png"]
+        ];
+
+        let index = 0;
+        let busy = false;
+
+        $("#revealBtn").click(function () {
+            if (busy) return;
+            busy = true;
+
+            const ids = ["#img1", "#img2", "#img3"];
+
+            // slide + fade out
+            $(ids.join(",")).animate(
+                { left: "-40px", opacity: 0 },
+                300,
+                function () {
+                    // after all finish, swap images
+                    if ($(this).is("#img3")) {
+                        index = (index + 1) % groups.length;
+
+                        $("#img1").attr("src", groups[index][0]);
+                        $("#img2").attr("src", groups[index][1]);
+                        $("#img3").attr("src", groups[index][2]);
+
+                        // reset position to the right and fade back in
+                        $(ids.join(","))
+                            .css({ left: "40px", opacity: 0 })
+                            .animate(
+                                { left: "0px", opacity: 1 },
+                                300,
+                                function () { busy = false; }
+                            );
+                    }
+                }
+            );
+        });
+
+    });
+    </script>
+
+</body>
+</html>
