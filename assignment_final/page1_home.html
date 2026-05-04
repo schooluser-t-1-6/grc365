@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>page1_home</title>
+
+	<!-- SEO META TAGS -->
+    <meta name="description" content="Source Filmmaker and Garry's Mod is used to create a mix of fightable bosses and cinematic storytelling.">
+    <meta name="keywords" content="DLZ Robotics, robots, Garry's Mod, Source Filmmaker">
+    <meta name="author" content="JustResort">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph (social media preview) -->
+    <meta property="og:title" content="Home Page">
+    <meta property="og:description" content="Explore what JustResort does as a hobby.">
+    <meta property="og:image" content="banner_ironwill.png">
+    <meta property="og:type" content="website">
+
+    <style>
+
+		#nav {
+    		text-align: center;
+   			margin: 10px 0 20px 0;
+		}
+
+		@font-face {
+            font-family: Datatype Bold;
+            src: url("datatype_bold.ttf");
+        }
+        .menu-button {
+            display: inline-block;
+            width: 130px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #608561;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+			font: 14pt/1.4em Datatype Bold
+        }
+
+        .menu-button:hover {
+            background-color: #70a873;
+        }
+
+        body {
+			background: whitesmoke;
+		} 
+		#page {
+			width: 928px;
+			height: 1358px;
+			background: lightgray;
+			border: 1px solid darkgray;
+            margin: 0 auto;
+			
+		} 
+		h1 {
+			text-align: center;
+			font: 36pt/1.4em Impact;
+		}
+		p {
+			font: 14pt/1.4em Georgia;
+			width: 760px;
+			margin: 12px auto;
+		}
+        #main {
+            width: 310px;
+            float: left;
+            margin: 6px 24px 24px 0;
+            border: 1px solid dimgray;
+			box-shadow: 2px 3px 6px
+        }
+        #banner {
+            width: 928px;
+			height: 923px*3/4;
+			float: none;
+			margin: none;
+            border: none;
+			box-shadow: none;
+        }
+		video {
+			display: block;
+			margin: 10px auto;
+            width: 640px;
+            float: center;
+			bordder: 1px solid dimgray;
+			box-shadow: 2px 3px 5px
+		}
+		figure {
+			width: 640px;
+			margin: 0 auto;
+		}
+		figurecaption {
+			font: italic 12pt/1.4em Georgia;
+			margin-top: 12px
+			text-align: center;
+		}
+
+
+		@media screen and (max-width: 750px) {
+    		#page {
+        		width: 100%;
+        		height: auto;
+        		border: none;
+    		}
+    		#banner {
+        		width: 100%;
+        		height: auto;
+    		}
+    		.menu-button {
+        		display: block;
+        		width: 90%;
+        		margin: 10px auto;
+        		font-size: 16px;
+        		padding: 14px;
+    		}
+    		h1 {
+        		font-size: 24pt;
+    		}
+    		p {
+        		width: 90%;
+        		font-size: 14pt;
+    		}
+    		#main {
+        		float: none;
+        		display: block;
+        		width: 70%;
+        		margin: 0 auto 20px auto;
+    		}
+    		video {
+        		width: 100%;
+        		max-width: 100%;
+    		}
+    		figure {
+        		width: 100%;
+    		}
+
+    		figurecaption {
+        		text-align: center;
+        		display: block;
+        		margin-top: 10px;
+    		}
+		}
+		
+    </style>
+</head>
+
+<body>
+    <div id="page">
+	<img id="banner" src="banner_ironwill.png" alt="Banner">
+
+	<div id="nav">
+    	<a href="page1_home.html" class="menu-button">Home</a>
+   	 	<a href="page2_releases.html" class="menu-button">Releases</a>
+ 		<a href="page3_storylines.html" class="menu-button">Storylines</a>
+    	<a href="page4_portfolio.html" class="menu-button">Academic Works</a>
+    	<a href="page5_contacts.html" class="menu-button">Contacts</a>
+	</div>
+
+	<h1>A Hobby Turned Professional</h1>
+
+        <p> <img id="main" src="headshot_dlz.png" alt="Headshot">
+            The Source engine was created on October 2004 and is the core of many iconic Valve games such as 
+			Half Life, Portal, and Team Fortress 2. The engine is also known for allowing players to easily mod Source games, though it may require some tools.
+        </p>
+        <p>
+            I utilize Source Filmmaker and Garry's Mod in a rather unusual way. Garry's Mod acts as a base for me to create bosses and complex 
+			weapons while Source Filmmaker is used to created animated story bits to compliment the featured creation. Though I don't get paid for my work, I continue to push myself to improve on my skills.
+        </p>
+		<p>
+			‎
+		</p>
+	<figure>
+		<video poster="dlz_release_thumbnail.png" controls>
+		<source src="dlz_release_compressed.mp4">
+		</video>
+		<figurecaption>
+			This video announced the release of DLZ Robotics to the Garry's Mod workshop.
+		</figurecaption>
+	</figure>
+    </div>
+</body>
+
+</html>

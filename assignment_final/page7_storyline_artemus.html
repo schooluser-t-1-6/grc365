@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>page7_storyline_artemus</title>
+
+    <!-- SEO META TAGS -->
+    <meta name="description" content="Artemus Division — a Garry's Mod boss add-on series that focuses on storytelling through cinematics.">
+    <meta name="keywords" content="Artemus Division, Garry's Mod, Source Filmmaker">
+    <meta name="author" content="JustResort">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph (social media preview) -->
+    <meta property="og:title" content="Artemus Division">
+    <meta property="og:description" content="Explore the story and design of Artemus Division.">
+    <meta property="og:image" content="banner_artemus.png">
+    <meta property="og:type" content="website">
+	
+    <style>
+
+		#nav {
+    		text-align: center;
+   			margin: 10px 0 20px 0;
+		}
+
+		@font-face {
+            font-family: Datatype Bold;
+            src: url("datatype_bold.ttf");
+        }
+        .menu-button {
+            display: inline-block;
+            width: 130px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #608561;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+			font: 14pt/1.4em Datatype Bold
+        }
+
+        .menu-button:hover {
+            background-color: #70a873;
+        }
+
+        body {
+            background: whitesmoke;
+        } 
+
+        #page {
+            width: 928px;
+            background: lightgray;
+            border: 1px solid darkgray;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        } 
+
+        h1 {
+            text-align: center;
+            font: 36pt/1.4em Impact;
+        }
+
+        p {
+            font: 14pt/1.4em Georgia, sans-serif;
+            width: 760px;
+            margin: 12px auto;
+        }
+		
+        @font-face {
+            font-family: Georgia;
+            src: url("georgia.ttf");
+        }
+		
+        #banner {
+            width: 928px;
+            height: 923px*3/4;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* BUTTON */
+        #revealBtn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 14pt;
+            cursor: pointer;
+        }
+
+        /* IMAGE BOX */
+        #slideBox {
+            width: 760px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            background: #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* IMAGES SIDE-BY-SIDE */
+        .slideItem {
+            width: 230px;
+            height: auto;
+            margin: 5px;
+            display: inline-block;
+            position: relative; /* so left animation works */
+        }
+
+        @media screen and (max-width: 750px) {
+            #page {
+                width: 100%;
+                height: auto;
+                border: none;
+                padding-bottom: 20px;
+            }
+            #banner {
+                width: 100%;
+                height: auto;
+            }
+            .menu-button {
+                display: block;
+                width: 90%;
+                margin: 10px auto;
+                padding: 14px;
+                font-size: 16px;
+            }
+            h1 {
+                font-size: 24pt;
+            }
+            p {
+                width: 90%;
+                font-size: 14pt;
+            }
+            #slideBox {
+                width: 95%;
+                padding: 10px;
+            }
+            .slideItem {
+                width: 90%;
+                display: block;
+                margin: 10px auto;
+                left: 0 !important;
+            }
+            #revealBtn {
+                width: 90%;
+                font-size: 14pt;
+                padding: 12px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="page">
+
+        <img id="banner" src="banner_artemus.png" alt="Banner">
+
+        <div id="nav">
+    	    <a href="page1_home.html" class="menu-button">Home</a>
+   	 	    <a href="page2_releases.html" class="menu-button">Releases</a>
+ 		    <a href="page3_storylines.html" class="menu-button">Storylines</a>
+    	    <a href="page4_portfolio.html" class="menu-button">Academic Works</a>
+    	    <a href="page5_contacts.html" class="menu-button">Contacts</a>
+	    </div>
+
+        <h1>Artemus Division</h1>
+
+        <div id="slideBox">
+            <img class="slideItem" id="img1" src="resort_artemus.png" alt="Item">
+            <img class="slideItem" id="img2" src="resort_dell.png" alt="Item">
+            <img class="slideItem" id="img3" src="resort_fuelweaver.png" alt="Item">
+        </div>
+
+        <button id="revealBtn">Cycle Portraits</button>
+
+        <p>
+            A series created as a comeback in 2026, Artemus Division does not have an official public name, taking the form of Garry's Mod "Sepcial Programs". This series was developed to give me an excuse to work on random characters of my choosing, no matter the video game IP or the artstyle.
+        </p>
+        <p>
+            The story takes place in two locations: within the written story and the existential plane outside of it. Artemus, the creator of the Universe, seeks inspiration through the exploration of combat and characters. However, the world built around Team Fortress 2 went rogue as the TF2 community began to embrace spectacle and fetish content, attacking creators for refusing to conform. Dell Conagher was Artemus' first character who was martyred for this.
+        </p>
+        <p>
+            Without an anchor and with a world that became uninspired, Artemus vanished from the scene for a few years, that is until he decided to return with plans of creating a new story, a new world that shut out community influence to allow characters to evolve. This new world would use Garry's Mod as a base, as the game naturally bridged multiple worlds together.
+        </p>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- SIMPLE SLIDE-LEFT + FADE SCRIPT -->
+    <script>
+    $(document).ready(function () {
+
+        const groups = [
+            ["resort_artemus.png", "resort_dell.png", "resort_fuelweaver.png"]
+        ];
+
+        let index = 0;
+        let busy = false;
+
+        $("#revealBtn").click(function () {
+            if (busy) return;
+            busy = true;
+
+            const ids = ["#img1", "#img2", "#img3"];
+
+            // slide + fade out
+            $(ids.join(",")).animate(
+                { left: "-40px", opacity: 0 },
+                300,
+                function () {
+                    // after all finish, swap images
+                    if ($(this).is("#img3")) {
+                        index = (index + 1) % groups.length;
+
+                        $("#img1").attr("src", groups[index][0]);
+                        $("#img2").attr("src", groups[index][1]);
+                        $("#img3").attr("src", groups[index][2]);
+
+                        // reset position to the right and fade back in
+                        $(ids.join(","))
+                            .css({ left: "40px", opacity: 0 })
+                            .animate(
+                                { left: "0px", opacity: 1 },
+                                300,
+                                function () { busy = false; }
+                            );
+                    }
+                }
+            );
+        });
+
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>page4_portfolio</title>
+
+	<!-- SEO META TAGS -->
+    <meta name="description" content="The portfolio of JustResort features works created for UNLV classes.">
+    <meta name="keywords" content="UNLV, portfolio, magazine cover">
+    <meta name="author" content="JustResort">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph (social media preview) -->
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:description" content="Explore the portfolio of JustResort.">
+    <meta property="og:image" content="banner_ironwill.png">
+    <meta property="og:type" content="website">
+
+    <style>
+	
+		#nav {
+    		text-align: center;
+   			margin: 10px 0 20px 0;
+		}
+
+		@font-face {
+            font-family: Datatype Bold;
+            src: url("datatype_bold.ttf");
+        }
+        .menu-button {
+            display: inline-block;
+            width: 130px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #608561;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+			font: 14pt/1.4em Datatype Bold
+        }
+
+        .menu-button:hover {
+            background-color: #70a873;
+        }
+
+		.container {
+  			display: grid;
+  			grid-template-columns: 320px 320px;
+  			background-color: #7c8e8f;
+  			padding: 10px;
+			width: 640px;
+			margin: 0 auto;
+			justify-items: center;
+		}
+		.container div {
+  			background-color: #7c8e8f;
+  			--border: 1px solid black;
+  			padding: 0px;
+  			font-size: 0px;
+  			text-align: center;
+		}
+		.container > div:nth-child(3) {grid-column: 1 / -1;}
+		
+        body {
+			background: whitesmoke;
+		} 
+		#page {
+			width: 928px;
+			height: 1558px;
+			background: lightgray;
+			border: 0px solid darkgray;
+            margin: 0 auto;
+		} 
+		h1 {
+			text-align: center;
+			font: 36pt/1.4em Impact;
+		}
+        @font-face {
+            font-family: Georgia;
+            src: url("georgia.ttf");
+		}
+		p {
+			font: 14pt/1.4em Georgia, sans-serif;
+			width: 760px;
+			margin: 12px auto;
+		}
+        #banner {
+            width: 928px;
+			height: 923px*3/4;
+			float: none;
+			margin: none;
+            border: none;
+			box-shadow: none;
+        }
+		#asset1, .zoom {
+            height: 400px;
+			width: 300px;
+            float: center;
+            margin: 6px 6px 6px 6px;
+            border: 1px solid dimgray;
+			box-shadow: 2px 3px 6px
+			transition: transform 0.5s;
+			background: url("magazine_makeover.jpg");
+			background-size: 100%
+			background-position: center;
+			grid-area: 1/1;
+        }
+		#asset1:hover {
+			transform: scale(1.03);
+			transition: transform 0.5s;
+			background-size: 105%;
+			transition: background-size 0.5s;
+		}
+		#asset2, .zoom {
+            height: 400px;
+			width: 300px;
+            float: center;
+            margin: 6px 6px 6px 6px;
+			border: 1px solid dimgray;
+			box-shadow: 2px 3px 6px
+			transition: transform 0.5s;
+			background: url("foundation_mock.png");
+			background-size: 100%
+			background-position: center;
+			grid-area: 1/2;
+        }
+		#asset2:hover {
+			transform: scale(1.03);
+			transition: transform 0.5s;
+			background-size: 105%;
+			transition: background-size 0.5s;
+		}
+		#asset3, .zoom {
+            height: 400px;
+			width: 620px;
+            float: center;
+            margin: 6px 6px 6px 6px;
+            border: 1px solid dimgray;
+			box-shadow: 2px 3px 6px
+			transition: transform 0.5s;
+			background: url("speedpaint_ironwill.png");
+			background-size: 100%
+			background-position: center;
+			grid-area: 2/1/2/2;
+        }
+		#asset3:hover {
+			transform: scale(1.03);
+			transition: transform 0.5s;
+			background-size: 105%;
+			transition: background-size 0.5s;
+		}
+
+		@media screen and (max-width: 750px) {
+    		#page {
+        		width: 100%;
+        		height: auto;
+        		border: none;
+    		}
+    		#banner {
+        		width: 100%;
+        		height: auto;
+    		}
+    		.menu-button {
+    			display: block;
+        		width: 90%;
+        		margin: 10px auto;
+        		padding: 14px;
+        		font-size: 16px;
+    		}
+    		h1 {
+        		font-size: 24pt;
+    		}
+    		p {
+        		width: 90%;
+        		font-size: 14pt;
+    		}
+    		.container {
+        		width: 100%;
+    		grid-template-columns: 1fr;
+        		padding: 0;
+    		}
+    		.container div {
+        		width: 100%;
+        		text-align: center;
+    		}
+    		#asset1, #asset2, #asset3 {
+        		width: 90%;
+        		height: auto;
+        		margin: 10px auto;
+        		float: none;
+    		}
+    		#asset3 {
+        		width: 90%;
+    		}
+		}
+
+    </style>
+</head>
+
+<body>
+    <div id="page">
+	<img id="banner" src="banner_ironwill.png" alt="Banner">
+
+	<div id="nav">
+    	<a href="page1_home.html" class="menu-button">Home</a>
+   	 	<a href="page2_releases.html" class="menu-button">Releases</a>
+ 		<a href="page3_storylines.html" class="menu-button">Storylines</a>
+    	<a href="page4_portfolio.html" class="menu-button">Academic Works</a>
+    	<a href="page5_contacts.html" class="menu-button">Contacts</a>
+	</div>
+	
+	<h1>Portfolio</h1>
+
+        <p>
+            These works were developed for classes taken at the University of Las Vegas, Nevada. Each piece was created for different purpose with different methods, from product design, to speedpainting a reference, to replicating an existing style.
+        </p>
+				<p>
+			‎
+		</p>
+
+		<div class="container">
+			  	<div>
+					<a href="magazine_makeover.jpg">
+					<img id="asset1" src="magazine_makeover_thumb.png" alt="Item1"/>
+					</a>
+				</div>
+  				<div>
+					<a href="foundation_mock.png">
+					<img id="asset2" src="foundation_mock_thumb.png" alt="Item2"/>
+					</a>
+				</div>
+  				<div>
+					<a href="speedpaint_ironwill.png">
+					<img id="asset3" src="speedpaint_ironwill_thumb.png" alt="Item3"/>
+					</a>
+				</div>
+			</div>
+	</div>
+</body>
+
+</html>

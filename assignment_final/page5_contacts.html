@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>page5_contacts</title>
+
+	<!-- SEO META TAGS -->
+    <meta name="description" content="A form can be filled out to contact JustResort.">
+    <meta name="keywords" content="contact, survey">
+    <meta name="author" content="JustResort">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph (social media preview) -->
+    <meta property="og:title" content="Contact Form">
+    <meta property="og:description" content="A form can be filled to contact JustResort.">
+    <meta property="og:image" content="banner_ironwill.png">
+    <meta property="og:type" content="website">
+
+    <style>
+
+		#nav {
+    		text-align: center;
+   			margin: 10px 0 20px 0;
+		}
+
+		@font-face {
+            font-family: Datatype Bold;
+            src: url("datatype_bold.ttf");
+        }
+        .menu-button {
+            display: inline-block;
+            width: 130px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #608561;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+			font: 14pt/1.4em Datatype Bold
+        }
+
+        .menu-button:hover {
+            background-color: #70a873;
+        }
+
+        body {
+			background: whitesmoke;
+		} 
+		#page {
+			width: 928px;
+			height: 1428px;
+			background: lightgray;
+			border: 1px solid darkgray;
+            margin: 0 auto;
+		} 
+		h1 {
+			text-align: center;
+			font: 36pt/1.4em Impact;
+		}
+		p {
+			font: 14pt/1.4em Georgia, sans-serif;
+			width: 760px;
+			margin: 12px auto;
+		}
+        @font-face {
+            font-family: Georgia;
+            src: url("georgia.ttf");
+		}
+		form {
+			width: 600px;
+			min-height: 600px;
+			padding: 24px;
+			background:#51828f;
+			margin: 36px auto;
+			box-shadow: 2px 3px 6px dimgray;
+			border-radius: 18px;
+			font: 14pt/1.4em Georgia, sans-serif;
+		}
+		fieldset {
+			margin-top: 6px;
+			border: none;
+		}
+		#personal input, #submit {
+			width: 100%;
+			height: 24px;
+			margin-bottom: 12px;
+		}
+		input[type="text"] {
+			width: 98%;
+			font: 14pt/1.4em Georgia, sans-serif;
+			margin-top: 6px 6px 6px;
+		}
+		input[type="submit"] {
+			width: 100px;
+			height: 40px;
+			background:rgb(243, 205, 100);
+			margin: 6px auto;
+			display: block;
+			border-radius: 6px;
+			border: 1px solid dimgray;
+			font: 14pt/1.4em Georgia, sans-serif;
+		}
+        #main {
+            width: 310px;
+            float: left;
+            margin: 6px 24px 24px 0;
+            border: 1px solid dimgray;
+			box-shadow: 2px 3px 6px
+        }
+        #banner {
+            width: 928px;
+			height: 923px*3/4;
+			float: none;
+			margin: none;
+            border: none;
+			box-shadow: none;
+        }
+
+		@media screen and (max-width: 750px) {
+    		#page {
+        		width: 100%;
+        		height: auto;
+        		border: none;
+    		}
+    		#banner {
+        		width: 100%;
+        		height: auto;
+    		}
+    		.menu-button {
+        		display: block;
+        		width: 90%;
+        		margin: 10px auto;
+        		padding: 14px;
+        		font-size: 16px;
+    		}
+    		h1 {
+        		font-size: 24pt;
+    		}
+    		p {
+        		width: 90%;
+        		font-size: 14pt;
+    		}
+    		form {
+        		width: 90%;
+        		padding: 16px;
+        		margin: 24px auto;
+        		font-size: 14pt;
+    		}
+    		input[type="text"], textarea, select {
+        		width: 100%;
+        		font-size: 14pt;
+    		}
+    		textarea {
+        		width: 100%;
+        		height: auto;
+    		}
+    		input[type="submit"] {
+        		width: 60%;
+        		height: 45px;
+        		font-size: 14pt;
+        		margin: 12px auto;
+    		}
+    		fieldset {
+        		margin-top: 12px;
+    		}
+    		#main {
+        		float: none;
+        		display: block;
+        		width: 70%;
+        		margin: 0 auto 20px auto;
+    		}
+		}
+
+    </style>
+</head>
+
+<body>
+    <div id="page">
+	<img id="banner" src="banner_ironwill.png" alt="Banner">
+
+	<div id="nav">
+    	<a href="page1_home.html" class="menu-button">Home</a>
+   	 	<a href="page2_releases.html" class="menu-button">Releases</a>
+ 		<a href="page3_storylines.html" class="menu-button">Storylines</a>
+    	<a href="page4_portfolio.html" class="menu-button">Academic Works</a>
+    	<a href="page5_contacts.html" class="menu-button">Contacts</a>
+	</div>
+
+    <form action="https://formsubmit.co/trinhj6@unlv.nevada.edu" method="post">
+		<h1>Contact Form</h1>
+		<label>First Name:</label><br/>
+		<input type="text"/><br/>
+		<p> </p>
+		<label>Last Name:</label><br/>
+		<input type="text"/><br/>
+		<p> </p>
+		<label>Email Address:</label><br/>
+		<input type="text"/><br/>
+		<fieldset>
+		<legend>Reason For Contacting</legend>
+		<input type="radio" name="service"/>
+		<label>Questions/Suggestions</label><br/>
+		<input type="radio" name="service"/>
+		<label>Commission</label><br/>
+		<input type="radio" name="service"/>
+		<label>Volunteer Assistance</label><br/>
+		<input type="radio" name="service"/>
+		<label>Other</label><br/>
+		</fieldset>
+		<fieldset>
+		<legend>Operating System</legend>
+		<input type="checkbox">
+		<label>Mac OS</label><br/>
+		<input type="checkbox">
+		<label>Windows</label><br/>
+		<input type="checkbox">
+		<label>WNIX</label><br/>
+		<input type="checkbox">
+		<label>Other</label><br/>
+		</fieldset>
+		<fieldset>
+			<legend>Add-on Series Involved</legend>
+			<select>
+				<option>None/Multiple</option>
+				<option>Dell's Proto-Arms</option>
+				<option>DLZ Robotics</option>
+				<option>Artemus Division</option>
+				<option>Other</option>
+			</select>
+		</fieldset>
+		<label>Message:</label><br/>
+		<textarea rows="5" cols="79"> </textarea>
+		<input type="submit"/>
+	</form>
+    </div>
+</body>
+
+</html>
